@@ -1,0 +1,30 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main()
+{
+   setlocale(LC_ALL,"portuguese");
+
+    int idade;
+
+    cout << "Digite a idade do nadador: ";
+    cin >> idade;
+
+    if (idade >= 5 && idade <= 7) {
+        cout << "O nadador está na categoria Infantil A." << endl;
+    } else if (idade >= 8 && idade <= 10) {
+        cout << "O nadador está na categoria Infantil B." << endl;
+    } else if (idade >= 11 && idade <= 13) {
+        cout << "O nadador está na categoria Juvenil A." << endl;
+    } else if (idade >= 14 && idade <= 17) {
+        cout << "O nadador está na categoria Juvenil B." << endl;
+    } else if (idade > 17) {
+        cout << "O nadador está na categoria Sênior." << endl;
+    } else {
+        cout << "Idade inválida." << endl;
+    }
+
+    return 0;
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+#include <iomanip>
+#include <locale>
+
+using namespace std;
+
+int main()
+{
+       double horas_trabalhadas, salario_minimo, valor_hora_trabalhada, salario_bruto, imposto, salario_liquido;
+
+       setlocale(LC_ALL, "Portuguese");
+
+    cout << "Digite o número de horas trabalhadas: ";
+    cin >> horas_trabalhadas;
+
+    cout << "Digite o valor do salário mínimo: ";
+    cin >> salario_minimo;
+
+    valor_hora_trabalhada = salario_minimo / 2.0;
+
+    salario_bruto = horas_trabalhadas * valor_hora_trabalhada;
+
+    imposto = 0.03 * salario_bruto;
+
+    salario_liquido = salario_bruto - imposto;
+
+    cout << fixed << setprecision(2);
+    cout << "Valor da hora trabalhada: R$ " << valor_hora_trabalhada << endl;
+    cout << "Salário bruto: R$ " << salario_bruto << endl;
+    cout << "Imposto: R$ " << imposto << endl;
+    cout << "Salário líquido a receber: R$ " << salario_liquido << endl;
+
+    return 0;
+}

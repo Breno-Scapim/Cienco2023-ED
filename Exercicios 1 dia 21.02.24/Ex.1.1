@@ -1,0 +1,28 @@
+#include <iostream>
+#include <locale>
+
+using namespace std;
+
+int main()
+{
+    float peso, altura, imc;
+
+    setlocale(LC_ALL, "Portuguese");
+
+    cout << "Digite o peso (em kg): ";
+    cin >> peso;
+    cout << "Digite a altura (em metros): ";
+    cin >> altura;
+
+    imc = peso / (altura * altura);
+
+    if (imc < 20) {
+        cout << "Abaixo do peso." << endl;
+    } else if (imc >= 20 && imc < 25) {
+        cout << "Peso ideal." << endl;
+    } else {
+        cout << "Acima do peso." << endl;
+    }
+
+    return 0;
+}
